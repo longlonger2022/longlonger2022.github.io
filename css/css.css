@@ -12,7 +12,7 @@ body{
   margin-right:0px;
   margin-bottom:0px;
   margin-left:0px;
-  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Cascadia Code", "Microsoft Jhenghei", sans-serif;
 }
 .panel{
   color:rgb(51, 51, 51);
@@ -61,17 +61,17 @@ body{
 }
 .display-1.mb-4{
   text-align:center;
-  font-family:Microsoft Yahei;
+  font-family:Cascadia Code;
   font-style:italic;
   position:relative;
 }
 .lead.fs-24.lh-sm.px-md-5.px-xl-15.px-xxl-10.mb-7{
-  font-family:Microsoft Yahei;
+  font-family:Cascadia Code;
   text-align:center;
   position:relative;
 }
 .btn.btn-lg.btn-primary.rounded-pill.mx-1{
-  font-family:Microsoft Yahei;
+  font-family:Cascadia Code;
   background-image:none;
   background-repeat:repeat;
   background-position:left top;
