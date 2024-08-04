@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+*{
+  box-sizing:border-box;
+}
+body{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+}
+.panel{
+  color:rgb(51, 51, 51);
+  font-weight:100;
+}
+.logo path{
+  pointer-events:none;
+  fill:none;
+  stroke-linecap:round;
+  stroke-width:7;
+  stroke:rgb(255, 255, 255);
+}
+.description{
+  text-align:center;
+  font-size:1em;
+  font-weight:500;
+  line-height:1.8rem;
+  margin-bottom:1rem;
+}
+.wechat-group img{
+  max-width:220px;
+  height:auto;
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius:8px;
+  margin-top:0px;
+  margin-right:auto;
+  margin-bottom:0px;
+  margin-left:auto;
+  width:100%;
+}
+.welcome-img img{
+  width:100%;
+}
+.bg-gradient-primary{
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius:8px;
+}
+.display-1.mb-4{
+  font-family:得意黑;
+}
+.lead.fs-24.lh-sm.px-md-5.px-xl-15.px-xxl-10.mb-7{
+  font-family:得意黑;
+}
+.btn.btn-lg.btn-primary.rounded-pill.mx-1{
+  font-family:得意黑;
+}
+.col-lg-8.mx-auto{
+  width:300px;
+}
+.btn.btn-lg.btn-primary.rounded-pill.mx-cencel{
+  width:10px;
+}
+.btn.btn-lg.btn-outline-primary.rounded-pill.mx-cencel{
+  width:10px;
+}
+.wrapper.bg-gradient-primary{
+  background-image:url('https://raw.githubusercontent.com/longlonger2022/Disk-Squeezer/main/photo.png');
+  background-repeat:repeat;
+  background-position:center center;
+  background-attachment:scroll;
+  background-size:cover;
+}
