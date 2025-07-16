@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #00a1d6; /* B站主题蓝 */
-    --secondary-color: #fb7299; /* B站主题粉 */
+    --primary-color: #00aeec; /* B站主题蓝 */
+    --secondary-color: #ff6699; /* B站主题粉 */
     --dark-color: #181818;
     --light-color: #f4f4f4;
 }
@@ -37,14 +37,36 @@ body {
     z-index: 1000;
     box-shadow: 0 0 15px rgba(0, 161, 214, 0.5); /* 基础发光效果  */
     border-bottom: 1px solid rgba(0, 161, 214, 0.3); /* 发光底部边框 */
-    transition: all 1s ease; /* 平滑过渡效果 */
+    transition: all 0.5s ease; /* 平滑过渡效果 */
 }
 /* 导航栏发光动画 */
 #navbar:hover {
     box-shadow: 
-        0 0 20px rgba(0, 161, 214, 0.8), /* 主发光层 */
-        0 0 30px rgba(0, 100, 255, 0.6); /* 二次光晕层  */
+        0 0 40px rgba(0, 161, 214, 0.8), /* 主发光层 */
+        0 0 50px rgba(0, 100, 255, 0.6); /* 二次光晕层  */
     background-color: rgba(255, 255, 255, 0.95); /* 悬停时减少透明度 */
+}
+
+/* 底部流动光效 */
+#navbar::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-color),
+        var(--secondary-color),
+        var(--primary-color),
+        transparent
+    );
+    background-size: 200% auto;
+    animation: lightFlow 3s linear infinite; /* 流动光效  */
+    opacity: 0.7;
+    z-index: 1001;
 }
 
 #navbar .container {
@@ -75,7 +97,7 @@ body {
     text-decoration: none;
     color: black;
     padding: 10px 15px;
-    transition: all 0.5s;
+    transition: all 0.3s;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 文字微光效果  */
     position: relative;
 }
@@ -87,7 +109,7 @@ body {
     width: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-    transition: all 0.5s;
+    transition: all 0.3s;
     transform: translateX(-50%);
 }
 
@@ -155,11 +177,12 @@ body {
     border: 3px solid var(--primary-color);
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     background: none;
+    padding: 12px 40px;
     color: var(--primary-color);
     border: 3px solid var(--primary-color); 
     box-shadow: var(--primary-color) 0 5px 20px;
@@ -175,12 +198,13 @@ body {
     color: white;
     border: 3px solid #ff6699;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     text-align: center;
 }
 
 .btn_bilibili:hover {
     background: none;
+    padding: 12px 30px;
     color: #ff6699;
     border: 3px solid #ff6699; 
     box-shadow: #ff6699 0 5px 20px;
@@ -195,11 +219,12 @@ body {
     color: white;
     border: 3px solid #fe2c55;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .btn_douyin:hover {
     background: none;
+    padding: 12px 30px;
     color: #fe2c55;
     border: 3px solid #fe2c55; 
     box-shadow: #fe2c55 0 5px 20px;
@@ -215,11 +240,12 @@ body {
     color: white;
     border: 3px solid #fb1b26;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .btn_xigua:hover {
     background: none;
+    padding: 12px 30px;
     color: #fb1b26;
     border: 3px solid #fb1b26; 
     box-shadow: #fb1b26 0 5px 20px;
@@ -235,11 +261,12 @@ body {
     color: white;
     border: 3px solid #f04142;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .btn_toutiao:hover {
     background: none;
+    padding: 12px 30px;
     color: #f04142;
     border: 3px solid #f04142; 
     box-shadow: #f04142 0 5px 20px;
@@ -255,11 +282,12 @@ body {
     color: white;
     border: 3px solid #ff3d13;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .btn_kuaishou:hover {
     background: none;
+    padding: 12px 30px;
     color: #ff3d13;
     border: 3px solid #ff3d13; 
     box-shadow: #ff3d13 0 5px 20px;
@@ -275,11 +303,12 @@ body {
     color: white;
     border: 3px solid #1f2318;
     font-weight: bold;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .btn_github:hover {
     background: none;
+    padding: 12px 30px;
     color: #1f2318;
     border: 3px solid #1f2318; 
     box-shadow: #1f2318 0 5px 20px;
@@ -373,6 +402,7 @@ body {
 }
 
 .project-card:hover {
+    padding: 5px 10px;
     transform: translateY(-10px);
 }
 
@@ -416,8 +446,8 @@ body {
 
 /* 页脚样式 */
 footer {
-    background: var(--dark-color);
-    color: white;
+    background: rgb(250, 250, 250);
+    color: black;
     text-align: center;
     padding: 40px 0;
 }
@@ -457,7 +487,7 @@ footer p {
         margin-top: 15px;
     }
 }
-/* ===== 新增流动光效动画 ===== */
+/* 流动光效动画 */
 @keyframes lightFlow {
     0% {
         background-position: 0% 50%;
@@ -465,25 +495,4 @@ footer p {
     100% {
         background-position: 200% 50%;
     }
-}
-
-#navbar::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--primary-color),
-        var(--secondary-color),
-        var(--primary-color),
-        transparent
-    );
-    background-size: 200% auto;
-    animation: lightFlow 3s linear infinite; /* 流动光效  */
-    opacity: 0.7;
-    z-index: 1001;
 }

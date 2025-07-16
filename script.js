@@ -23,26 +23,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// 表单提交处理
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // 获取表单数据
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries());
-        
-        // 此处可添加AJAX提交逻辑
-        console.log('表单提交数据:', data);
-        
-        // 显示成功消息
-        alert('消息已发送！我会尽快回复您🎉');
-        
-        // 重置表单
-        this.reset();
-    });
-}
+
 
 // 作品卡片悬停效果增强
 const projectCards = document.querySelectorAll('.project-card');
