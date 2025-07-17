@@ -78,6 +78,7 @@ body {
 }
 
 .logo {
+    text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
     text-decoration: none;
@@ -459,6 +460,8 @@ body {
 
 .version {
     flex: 1;
+    text-decoration: none;
+    color: black;
     min-width: 300px;
     border: 3px solid var(--primary-color);
     border-radius: 30px;
@@ -477,6 +480,8 @@ body {
 
 .latest_version {
     flex: 1;
+    text-decoration: none;
+    color: black;
     min-width: 300px;
     border: 3px solid yellow;
     border-radius: 30px;
@@ -494,6 +499,8 @@ body {
 
 .special_version {
     flex: 1;
+    text-decoration: none;
+    color: black;
     min-width: 300px;
     border: 3px solid yellowgreen;
     border-radius: 30px;
