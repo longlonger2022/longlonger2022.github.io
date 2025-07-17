@@ -3,108 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>硬盘榨干器</title>
+    <title>龙ger_longer | 首页</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
-    <!--导航栏-->
+    <!-- 导航栏 -->
     <nav id="navbar">
         <div class="container">
-            <a href="/" title="点击返回首页" class="logo">龙ger_longer | 产品 | <span>硬盘榨干器</span></a>
+            <a href="#home" class="logo">龙ger_longer | <span>首页</span></a>
             <ul>
-                <li><a href="/">首页</a></li>
-                <li><a href="/">更多产品</a></li>
-                <li><a href="#author">社交平台</a></li>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#projects">产品</a></li>
+                <li><a href="#about">关于Me</a></li>
             </ul>
         </div>
     </nav>
 
-    <!--主页banner-->
-    <header id="top" class="banner">
+    <!-- 主页Banner -->
+    <header id="home" class="banner">
         <div class="container">
-            <img src="/img/Disk-Squeezer.512px.png" alt="Disk-Squeezer">
-            <h1><b>硬盘榨干器</b></h1>
-            <p><b>英文名：Disk-Squeezer | 快速榨干电脑磁盘空间的嚎工具👍</b></p>
-            <a href="download" class="btn">前往下载</a>
+            <img src="img/profile_picture.png" alt="UP主头像">
+            <h1><b>龙ger_longer</h1>
+            <p>B站科技区整活UP主 | GitHub贡献者</b></p>
+            <a href="#projects" class="btn">产品展示</a>
+            <a href="#about" class="btn">关于Me</a>
         </div>
     </header>
 
-    <!--两大模式-->
-    <section id="important_modes" class="section light-bg">
+    <!-- 产品展示 -->
+    <section id="projects" class="section light-bg">
         <div class="container">
-            <h2><b>两大模式</b></h2>
-            <div class="modes">
-                <div class="mode">
-                    <h3>命令模式</h3>
-                    <li>最实用</li>
-                    <li>于1.4版本加入</li>
-                    <li>速度极快，可以在几秒之内榨干</li>
-                </div>
-                <div class="mode">
-                    <h3>写入模式</h3>
-                    <li>核心功能之一</li>
-                    <li>伴随着硬盘榨干器的诞生</li>
-                    <li>速度较慢，需要数至数十分钟</li>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--各大重要版本-->
-    <section id="important_versions" class="section light-bg">
-        <div class="container">
-            <h2><b>各大重要版本</b></h2>
-            <div class="versions">
-                <a href="download" title="点击前往下载页" class="latest_version">
-                    <h3>最新版-2.0版本</h3>
-                    <li>2024年11月30日发布</li>
-                    <li>界面几乎重写，使用相对位置，适配各个屏幕</li>
-                    <li>首次加入了动画</li>
-                    <li>美化界面，使界面更加好看</li>
-                    <li>再次加入多语言，支持简体中文，繁体中文，英语</li>
-                </a>
-                <a href="download" title="点击前往下载页" class="special_version">
-                    <h3>特殊版-CMD1.0版本</h3>
-                    <li>2024年8月19日发布</li>
-                    <li>首个可以通过调用命令直接榨干的版本</li>
-                    <li>将其放在PATH变量中或System32中，隐蔽性好</li>
-                </a>
-                <a href="download" title="点击前往下载页" class="version">
-                    <h3>2.0-Beta版本</h3>
-                    <li>2024年8月1日发布</li>
-                    <li>2.0-Alpha版本中首次加入了图形化界面，但及其粗糙，本版本为Alpha版完善许多功能而来</li>
-                    <li>首次使用Qt库，界面比Alpha版好看了不少</li>
-                    <li>写入模式首次不使用主线程</li>
-                    <li>命令模式代码几乎重写</li>
-                </a>
-                <a href="download" title="点击前往下载页" class="version">
-                    <h3>1.4版本</h3>
-                    <li>2023年10月22日发布</li>
-                    <li>最实用，也是最重要的速度最快的版本之一</li>
-                    <li>加入了命令模式，从此榨干仅是分秒之事</li>
-                </a>
-                <a href="download" title="点击前往下载页" class="version">
-                    <h3>1.0版本</h3>
-                    <li>2023年9月23日发布</li>
-                    <li>硬盘榨干器的第一个正式版</li>
-                    <li>由Initial Release(初始版本)重写而来，使用C++编写</li>
+            <h2><b>产品展示</b></h2>
+            <div class="projects-grid">
+                <a href="disk-squeezer" target="_blank" class="project-card">
+                    <img src="img/Disk-Squeezer.512px.png" alt="产品图片">
+                    <h3>硬盘榨干器 Disk-Squeezer</h3>
+                    <p>可以榨干电脑磁盘空间，小心使用，可以给自己的盆友逝逝(doge</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <!--制作者-->
-    <section id="author" class="section light-bg">
+    <!-- 关于Me -->
+    <section id="about" class="section">
         <div class="container">
-            <h2><b>制作者</b></h2>
+            <h2><b>关于Me</b></h2>
             <div class="profile">
-                <img src="/img/profile_picture.png" alt="Profile Picture">
+                <img src="img/profile_picture.png" alt="UP主头像">
                 <div class="bio">
-                    <b>
-                    <p>龙ger_longer：科技区整活UP主 | GitHub贡献者 | 硬盘榨干器制作者</p>
-                    <p>QQ交流群：975059383，目前粉丝量可以私信必回，更新完全随缘，记得三连！[doge]</p>
-                    </b>
+                    <p><b>B站科技区整活UP主 | GitHub贡献者</p>
+                    <p>QQ交流群：975059383，目前粉丝量可以私信必回，更新完全随缘，记得三连！[doge]</b></p>
+                    
                     <!-- 社交媒体链接 -->
                     <div class="social-links">
                         <a href="https://space.bilibili.com/3493110082439389" target="_blank" class="btn_bilibili" style=":hover{color: #ff6699;}">哔哩哔哩空间</a>
@@ -113,24 +63,23 @@
                         <a href="https://www.toutiao.com/c/user/token/MS4wLjABAAAAxkLNY3Z7gbYJdfK0zdDK7uKG-jKFtMxmFeBk_M_yl3w" target="_blank" class="btn_toutiao">今日头条</a>
                         <a href="https://www.kuaishou.com/profile/3x2kzmpqxkh9ngk" target="_blank" class="btn_kuaishou">快手</a>
                         <a href="https://github.com/longlonger2022" target="_blank" class="btn_github">GitHub个人主页</a>
-                        <br>
-                        <a href="download" class="btn">前往下载</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--页脚-->
+
+    <!-- 页脚 -->
     <footer>
-        <b>
         <div class="container">
+            <b>
             <p>by 龙ger_longer</p>
             <p>一键三连！！！！！</p>
+            </b>
         </div>
-        </b>
     </footer>
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
