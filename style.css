@@ -17,6 +17,18 @@ body {
     line-height: 1.6;
     color: #333;
     background: var(--light-color);
+    animation: blurToClear 1s ease-in-out;
+}
+
+@keyframes blurToClear {
+    0% {
+        filter: blur(10px);
+        opacity: 0.75;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 
 .container {
