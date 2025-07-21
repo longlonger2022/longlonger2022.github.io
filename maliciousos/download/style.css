@@ -413,53 +413,6 @@ body {
     margin-top: 25px;
 }
 
-/* 介绍 */
-.introductions {
-    text-align: left;
-    display: flex;
-    gap: 100%;
-    flex-wrap: wrap;
-}
-
-.introductions img {
-    margin-top: -15%;
-    float: right;
-    width: 50%;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px #0087b3;
-    transition: all 0.5s ease;
-}
-
-.introductions img:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 100px #0087b3;
-}
-
-.introductions img#attribute {
-    width: auto;
-    height: 75vh;
-}
-
-.introduction {
-    margin-top: 200px;
-    flex: 1;
-    min-width: 300px;
-}
-
-.introduction p {
-    width: 50%;
-    font-size: 2rem;
-}
-
-.introduction h3 {
-    width: 50%;
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: var(--dark-color);
-}
-
 /* 页脚样式 */
 footer {
     background: rgb(250, 250, 250);
@@ -501,34 +454,5 @@ footer p {
     
     #navbar ul {
         margin-top: 15px;
-    }
-
-    .introductions {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .introductions img {
-        margin-top: 0;
-        float: none;
-        width: 100%;
-        height: auto;
-    }
-
-    .introductions img#attribute {
-        width: 100%;
-        height: auto;
-    }
-
-    .introduction p{
-        width: 100%;
-    }
-    .introduction h3{
-        width: 100%;
-    }
-
-    .introduction {
-        margin-top: 10%;
     }
 }
