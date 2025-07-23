@@ -188,6 +188,8 @@ body {
 .btn {
     display: inline-block;
     background: var(--blue-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: white;
     padding: 12px 25px;
     border-radius: 30px;
@@ -447,7 +449,7 @@ body {
     min-width: 300px;
     border: 3px solid var(--blue-color);
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 10px 20px 30px;
     box-shadow: 0 10px 30px var(--blue-color);
     transition: all 0.4s ease;
 }
@@ -455,7 +457,7 @@ body {
     background: var(--blue-color); 
     color: white;
     box-shadow: 0 20px 100px var(--blue-color);
-    padding: 10px 50px;
+    padding: 10px 50px 30px;
     transform: translateY(-10px);
 }
 .product-intro h3 {
