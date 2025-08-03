@@ -134,8 +134,41 @@ body {
 #navbar ul li a:hover::after {
     width: 80%; /* 底部流动光效  */
 }
-
-
+.select_btn {
+    border: none;
+    background: none;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 文字微光效果  */
+    position: relative;
+}
+.select_btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue-color), transparent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.select_btn:hover {
+    color: var(--blue-color);
+    text-shadow: 0 0 10px rgba(0, 161, 214, 0.8); /* 悬停增强发光  */
+}
+.select_btn:hover::after {
+    width: 75%; /* 底部流动光效  */
+}
+.selected {
+    color: var(--blue-color);
+    text-shadow: 0 0 10px rgba(0, 161, 214, 0.8); /* 悬停增强发光  */
+}
+.selected::after {
+    width: 100%; /* 底部流动光效  */
+}
 
 
 
@@ -152,12 +185,16 @@ body {
 
 /* Banner样式 */
 .banner {
-    height: 100vh;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    height: auto;
+    min-height: 100vh;
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
-    padding-top: 75px
+    padding-top: 75px;
+    padding-bottom: 50px;
 }
 .gradient {
     background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
@@ -345,7 +382,6 @@ body {
 }
 .bio {
     flex: 1;
-    min-width: 300px;
 }
 .bio p {
     margin-bottom: 20px;
@@ -527,7 +563,7 @@ footer p {
         -webkit-backdrop-filter: blur(10px);
     }
     .banner {
-        margin-top: 10%;
+        margin-top: 20%;
     }
     .banner h1 {
         font-size: 2.5rem;
