@@ -160,7 +160,7 @@ body {
     text-shadow: 0 0 10px rgba(0, 161, 214, 0.8); /* 悬停增强发光  */
 }
 .select_btn:hover::after {
-    width: 75%; /* 底部流动光效  */
+    width: 125%; /* 底部流动光效  */
 }
 .selected {
     color: var(--blue-color);
