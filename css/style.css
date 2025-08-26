@@ -185,8 +185,6 @@ body {
 
 /* Banner样式 */
 .banner {
-    overflow-x: scroll;
-    overflow-y:hidden;
     height: auto;
     min-height: 100vh;
     color: white;
