@@ -483,7 +483,7 @@ body {
     min-width: 300px;
     border: 3px solid var(--blue-color);
     border-radius: 30px;
-    padding: 10px 20px 30px;
+    padding: 10px 20px 10px;
     box-shadow: 0 10px 30px var(--blue-color);
     transition: all 0.4s ease;
 }
@@ -498,6 +498,9 @@ body {
     padding: 20px 20px 10px;
 }
 .product-intro p {
+    padding: 0 20px 20px;
+}
+.product-intro ul {
     padding: 0 20px 20px;
 }
 .golden {
