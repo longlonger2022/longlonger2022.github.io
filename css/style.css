@@ -232,6 +232,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 5px 10px;
     transition: all 0.3s ease;
 }
 .btn:hover {
@@ -240,6 +241,10 @@ body {
     color: var(--blue-color);
     box-shadow: var(--blue-color) 0 5px 20px;
     transform: translateY(-5px);
+}
+.btn:active {
+    transform: translateY(0);
+    box-shadow: var(--blue-color) 0 0px 0px;
 }
 .bilibili {
     background: var(--pink-color);
