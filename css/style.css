@@ -9,7 +9,7 @@
     --pink-color: #ff6699; /* B站主题粉 */
     --golden-color: #ffd700;
     --dark-color: #181818;
-    --light-color: #f4f4f4;
+    --light-color: #F0F8FF; /* 背景颜色 */
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -191,8 +191,13 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    border-bottom: rgba(240, 248, 255, 0.5) 2px solid;
     padding-top: 75px;
     padding-bottom: 50px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 25px;
 }
 .gradient {
     background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
@@ -369,7 +374,7 @@ body {
     border-radius: 2px;
 }
 .light-bg {
-    background-color: white;
+    background-color: aliceblue;
 }
 
 
@@ -550,7 +555,6 @@ body {
 
 /* 页脚样式 */
 footer {
-    background: rgb(250, 250, 250);
     color: black;
     text-align: center;
     padding: 40px 0;
