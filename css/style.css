@@ -197,7 +197,7 @@ body {
     margin-bottom: 30px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 25px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 25px;
 }
 .gradient {
     background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
