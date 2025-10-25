@@ -3,18 +3,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.5s ease;
 }
+
 :root {
+    color-scheme: light dark; /* 支持暗色模式  */
     --blue-color: #00aeec; /* B站主题蓝 */
     --pink-color: #ff6699; /* B站主题粉 */
     --golden-color: #ffd700;
-    --dark-color: #181818;
+    --dark-color: #00213e;
     --light-color: #F0F8FF; /* 背景颜色 */
 }
+/* 暗色模式下的:root */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light dark; /* 支持暗色模式  */
+        --blue-color: #00aeec;
+        --pink-color: #ff6699;
+        --golden-color: #dfbc00; /* 防止原来的金色在暗色模式下过于刺眼 */
+        --dark-color: #F0F8FF;
+        --light-color: #00213e;
+    }
+}
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--dark-color);
     background: var(--light-color);
     animation: blurToClear 1s ease-in-out;
     -webkit-animation: blurToClear 1s ease-in-out;
@@ -40,8 +56,8 @@ body {
 
 /* 导航样式 */
 #navbar {
-    background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
-    backdrop-filter: blur(10px); /* 毛玻璃模糊效果 - 核心科技感特效  */
+    background-color: var(--light-color);
+    backdrop-filter: blur(10px); /* 毛玻璃模糊效果  */
     -webkit-backdrop-filter: blur(10px); /* 兼容Safari */
     position: fixed;
     width: 100%;
@@ -53,6 +69,7 @@ body {
 }
 /* 导航栏发光动画 */
 #navbar:hover {
+    backdrop-filter: blur(15px); /* 毛玻璃模糊效果加强  */
     box-shadow: 
         0 0 40px rgba(0, 161, 214, 0.8), /* 主发光层 */
         0 0 50px rgba(0, 100, 255, 0.6); /* 二次光晕层  */
@@ -110,7 +127,7 @@ body {
 /* 导航链接发光特效 */
 #navbar ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--dark-color);
     padding: 10px 15px;
     transition: all 0.3s;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 文字微光效果  */
@@ -138,7 +155,7 @@ body {
     border: none;
     background: none;
     text-decoration: none;
-    color: black;
+    color: var(--dark-color);
     padding: 10px 15px;
     transition: all 0.3s;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 文字微光效果  */
@@ -187,7 +204,7 @@ body {
 .banner {
     height: auto;
     min-height: 100vh;
-    color: white;
+    color: #F0F8FF;
     display: flex;
     align-items: center;
     text-align: center;
@@ -231,7 +248,7 @@ body {
     background: var(--blue-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    color: white;
+    color: var(--light-color);
     padding: 12px 25px;
     border-radius: 30px;
     border: 3px solid var(--blue-color);
@@ -337,12 +354,12 @@ body {
     height: auto;
     border-radius: 15px;
     object-fit: cover;
-    box-shadow: 0 10px 30px #0087b3;
+    box-shadow: 0 10px 30px var(--blue-color);
     transition: all 0.5s ease;
 }
 .intro_img:hover {
     transform: translateY(-15px);
-    box-shadow: 0 20px 100px #0087b3;
+    box-shadow: 0 20px 100px var(--blue-color);
 }
 .intro_img#attribute {
     width: auto;
@@ -375,7 +392,7 @@ body {
     border-radius: 2px;
 }
 .light-bg {
-    background-color: aliceblue;
+    background-color: var(--light-color);
 }
 
 
@@ -416,7 +433,7 @@ body {
 }
 .project-card {
     text-decoration: none;
-    background: white;
+    background: var(--light-color);
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -438,7 +455,7 @@ body {
 }
 .project-card p {
     padding: 0 20px 20px;
-    color: #666;
+    color: var(--dark-color);
 }
 /* 联系表单 */
 #contact-form {
@@ -489,7 +506,7 @@ body {
 .product-intro {
     overflow: hidden;
     text-decoration: none;
-    color: black;
+    color: var(--dark-color);
     flex: 1;
     min-width: 300px;
     border: 3px solid var(--blue-color);
@@ -500,7 +517,7 @@ body {
 }
 .product-intro:hover {
     background: var(--blue-color); 
-    color: white;
+    color: var(--light-color);
     box-shadow: 0 20px 100px var(--blue-color);
     padding: 10px 50px 30px;
     transform: translateY(-10px);
@@ -519,7 +536,7 @@ body {
     box-shadow: 0 10px 30px var(--golden-color);
 }
 .golden:hover {
-    color: black;
+    color: var(--dark-color);
     box-shadow: 0 20px 100px var(--golden-color);
     background: var(--golden-color);
 }
@@ -528,17 +545,17 @@ body {
     box-shadow: 0 10px 30px yellowgreen;
 }
 .yellowgreen:hover {
-    color: black;
+    color: var(--dark-color);
     box-shadow: 0 20px 100px yellowgreen;
     background: yellowgreen;
 }
 .blue {
-    color: white;
+    color: var(--light-color);
     background: var(--blue-color);
     box-shadow: 0 10px 30px var(--blue-color);
 }
 .blue:hover {
-    color: black;
+    color: var(--dark-color);
     box-shadow: 0 20px 100px var(--blue-color);
     background: none;
 }
@@ -547,7 +564,7 @@ body {
 }
 .no_more_color:hover {
     background: none;
-    color: black;
+    color: var(--dark-color);
 }
 
 
@@ -556,7 +573,7 @@ body {
 
 /* 页脚样式 */
 footer {
-    color: black;
+    color: var(--dark-color);
     text-align: center;
     padding: 40px 0;
 }
