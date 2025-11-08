@@ -5,7 +5,6 @@
     box-sizing: border-box;
     transition: all 0.5s ease;
 }
-
 :root {
     color-scheme: light dark; /* 支持暗色模式  */
     --blue-color: #00aeec; /* B站主题蓝 */
@@ -35,13 +34,15 @@ body {
     animation: blurToClear 1s ease-in-out;
     -webkit-animation: blurToClear 1s ease-in-out;
 }
+
+/* 模糊变清晰动画 */
 @keyframes blurToClear {
     0% {
         filter: blur(10px);
         -webkit-filter: blur(10px);
         opacity: 0;
     }
-    25% {
+    50% {
         opacity: 1;
     }
     100% {
@@ -49,7 +50,6 @@ body {
         -webkit-filter: blur(0);
     }
 }
-
 
 
 
@@ -391,6 +391,7 @@ body {
     height: 4px;
     background: var(--blue-color);
     border-radius: 2px;
+    box-shadow: var(--blue-color) 0 1px 10px;
 }
 .light-bg {
     background-color: var(--light-color);
@@ -578,13 +579,76 @@ footer {
     text-align: center;
     padding: 40px 0;
 }
-
 footer p {
     margin: 10px 0;
 }
-
-
-
+footer h2 {
+    position: relative;
+    margin-bottom: 5px;
+}
+footer h2::after{
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: var(--blue-color);
+    border-radius: 2px;
+    box-shadow: var(--blue-color) 0 1px 10px;
+}
+footer .show {
+    /* 三栏布局 */
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: flex-start;
+    text-align: left;
+}
+footer .show .row {
+    /* 垂直布局 */
+    flex-direction: column;
+    border-left: var(--dark-color) 1px solid;
+}
+/* ul垂直布局 */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer ul li {
+    margin: 10px 0;
+}
+footer ul li a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+footer ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue-color), transparent);
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+footer ul li a:hover {
+    color: var(--blue-color);
+    text-shadow: 0 0 10px rgba(0, 161, 214, 0.8); /* 悬停增强发光  */
+}
+footer ul li a:hover::after {
+    width: 100%; /* 底部流动光效  */
+}
 /* 响应式设计 */
 @media (max-width: 768px) {
     #navbar {
