@@ -217,7 +217,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 25px;
 }
 .gradient {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+    background: linear-gradient(135deg, rgb(0, 219, 222), rgb(252, 0, 255), rgb(0, 219, 222));
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     -webkit-animation: gradientBG 10s ease infinite;
@@ -570,7 +570,30 @@ body {
 }
 
 
-
+/* 视频container样式 */
+.video-container {
+    position: relative;
+    padding-bottom: calc(9 / 16 * 80%); /* 默认16:9 */
+    width: 80%;
+    height: 0;
+    overflow: hidden;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: var(--blue-color) 0px 5px 50px;
+}
+.video-container:hover {
+    box-shadow: var(--blue-color) 0px 10px 100px;
+}
+/* 视频样式 */
+.video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 
 /* 页脚样式 */
@@ -709,6 +732,19 @@ footer ul li a:hover::after {
     .product-introarea {
         text-align: center;
         margin-top: 10%;
+    }
+    .video-container {
+        width: 100%;
+        height: calc(9 / 16 * 100%);
+    }
+    footer .show {
+        flex-direction: column;
+    }
+    footer .show .row {
+        border-left: none;
+        border-top: var(--dark-color) 1px solid;
+        margin-top: 10px;
+        padding-top: 10px;
     }
 }
 
