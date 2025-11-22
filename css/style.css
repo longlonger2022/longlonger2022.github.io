@@ -26,8 +26,15 @@
 }
 
 
+/* 字体 */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrains\ Mono/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'JetBrains Mono', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
     background: var(--light-color);
@@ -672,6 +679,10 @@ footer ul li a:hover {
 footer ul li a:hover::after {
     width: 100%; /* 底部流动光效  */
 }
+
+
+
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     #navbar {
