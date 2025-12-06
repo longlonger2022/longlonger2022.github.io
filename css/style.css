@@ -286,10 +286,9 @@ body {
 }
 .btn:hover {
     background: none;
-    padding: 12px 35px;
     color: var(--blue-color);
     box-shadow: var(--blue-color) 0 5px 20px;
-    transform: translateY(-5px) rotate(5deg);
+    transform: translateY(-5px) rotate(5deg)  scale(1.2);
 }
 .btn:active {
     transform: translateY(0);
@@ -468,9 +467,8 @@ body {
     transition: all 0.5s ease;
 }
 .project-card:hover {
-    padding: 5px 10px;
     box-shadow: 0 10px 25px var(--blue-color);
-    transform: translateY(-10px) rotate(5deg);
+    transform: translateY(-10px) rotate(5deg) scale(1.1);
 }
 .project-card img {
     width: 100%;
@@ -547,8 +545,7 @@ body {
     background: var(--blue-color); 
     color: var(--light-color);
     box-shadow: 0 20px 100px var(--blue-color);
-    padding: 10px 50px 30px;
-    transform: translateY(-10px) rotate(5deg);
+    transform: translateY(-10px) rotate(5deg)  scale(1.1);
 }
 .product-intro h3 {
     padding: 20px 20px 10px;
@@ -748,6 +745,9 @@ footer ul li a:hover::after {
         height: auto;
     }
 
+    .project-card:hover{
+    transform: translateY(-10px) rotate(2.5deg) scale(1.05);
+    }
     .product-introarea p{
         width: 100%;
     }
