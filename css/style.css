@@ -809,7 +809,7 @@ footer ul li a:hover::after {
     }
     .video-container {
         width: 100%;
-        height: calc(9 / 16 * 100%);
+    padding-bottom: calc(9 / 16 * 100%); /* 默认16:9 */
     }
     footer .show {
         flex-direction: column;
