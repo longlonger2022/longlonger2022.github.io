@@ -12,7 +12,14 @@
     <!-- 导航栏 -->
     <nav id="navbar">
         <div class="container">
-            <a href="/" class="logo" title="点击返回首页">龙ger_longer | <span>产品展示</span></a>
+            <div class="logo">
+                <span>龙ger_longer</span>
+                <div class="path">
+                    <a href="/" class="link">首页</a>
+                    /
+                    <a href="#" class="link">产品展示</a>
+                </div>
+            </div>
             <ul>
                 <li><a href="/">首页</a></li>
                 <li><a href="#products">产品</a></li>
@@ -36,10 +43,20 @@
                     <h3>万能倒计时 Universal-Timer</h3>
                     <p>实用的倒计时工具，可以清楚地直到距离目标时间剩余的时间</p>
                 </a>
+                <a href="UBackup" target="_blank" class="project-card">
+                    <img src="/img/Icon/UBackup_icon.512px.png" alt="产品图片">
+                    <h3>U备份 UBackup</h3>
+                    <p>实用的U盘备份工具，可以自动将新增驱动器备份到指定目录</p>
+                </a>
                 <a href="MaliciousOS" target="_blank" class="project-card">
                     <img src="/img/Icon/MaliciousOS_icon.nolgr.512px.png" alt="产品图片">
                     <h3>MaliciousOS</h3>
                     <p>超级无敌流氓操作系统，开机满屏广告，体验流氓软件的滋味(doge</p>
+                </a>
+                <a href="QuickNorthKorea" target="_blank" class="project-card">
+                    <img src="/img/Icon/QuickNorthKorea_icon.512px.png" alt="产品图片">
+                    <h3>一键恩情</h3>
+                    <p>一键感受将军的恩情! \o/</p>
                 </a>
             </div>
         </div>
@@ -70,13 +87,14 @@
         </div>
     </section>
 
+    <!--推荐内容-->
+    <section id="ad"></section>
+
     <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <p>Copyright © 2025 龙ger_longer</p>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 
     <script src="/js/script.js"></script>
+    <script src="/js/ad.js"></script>
+    <script src="/js/footer.js"></script>
 </head>
 </html>

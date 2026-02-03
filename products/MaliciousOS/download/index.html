@@ -11,10 +11,21 @@
     <!--导航栏-->
     <nav id="navbar">
         <div class="container">
-            <a href="../" title="点击返回上级页面" class="logo">龙ger_longer | 产品 | <span>MaliciousOS</span> | <span>下载页</span></a>
+            <div class="logo">
+                <span>龙ger_longer</span>
+                <div class="path">
+                    <a href="/" class="link">首页</a>
+                    /
+                    <a href="/products" class="link">产品</a>
+                    /
+                    <a href="../" class="link">MaliciousOS</a>
+                    /
+                    <a href="#" class="link">下载</a>
+                </div>
+            </div>
             <ul>
                 <li><a href="/">首页</a></li>
-                <li><a href="/">更多产品</a></li>
+                <li><a href="/products">更多产品</a></li>
                 <li><a href="#author">社交平台</a></li>
             </ul>
         </div>
@@ -212,20 +223,20 @@
         <div class="container">
             <img src="/img/Icon/MaliciousOS_icon.nolgr.512px.png" alt="MaliciousOS_icon.png" class="product_img">
             <h1><b>MaliciousOS</b></h1>
-            <p><b>您值得拥有👍</b></p>
+            <p><b>您的嚎朋友值得拥有👍</b></p>
             <a href="#top" class="btn">前往下载</a>
         </div>
     </section>
 
-    <!--页脚-->
-    <footer>
-        <div class="container">
-            <p>Copyright © 2025 龙ger_longer</p>
-        </div>
-    </footer>
+    <!--推荐内容-->
+    <section id="ad"></section>
 
+    <!--页脚-->
+    <footer id="footer"></footer>
 
     <script src="/js/script.js"></script>
+    <script src="/js/ad.js"></script>
+    <script src="/js/footer.js"></script>
     <script src="script.js"></script>
 
 </body>

@@ -11,17 +11,26 @@
     <!--导航栏-->
     <nav id="navbar">
         <div class="container">
-            <a href="/" title="点击返回首页" class="logo">龙ger_longer | 产品 | <span>硬盘榨干器</span></a>
+            <div class="logo">
+                <span>龙ger_longer</span>
+                <div class="path">
+                    <a href="/" class="link">首页</a>
+                    /
+                    <a href="/products" class="link">产品</a>
+                    /
+                    <a href="#" class="link">硬盘榨干器</a>
+                </div>
+            </div>
             <ul>
                 <li><a href="/">首页</a></li>
-                <li><a href="/">更多产品</a></li>
+                <li><a href="/products">更多产品</a></li>
                 <li><a href="#author">社交平台</a></li>
             </ul>
         </div>
     </nav>
 
     <!--主页banner-->
-    <header id="top" class="banner gradient" style="background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);background-size: 400% 400%;">
+    <header id="top" class="banner gradient" style="background: linear-gradient(-225deg, #473B7B 0%, #3584A7 50%, #30D2BE 100%);background-size: 400% 400%;">
         <div class="container">
             <img src="/img/Icon/Disk-Squeezer.512px.png" alt="Disk-Squeezer" class="product_img">
             <h1><b>硬盘榨干器</b></h1>
@@ -108,6 +117,16 @@
         </div>
     </section>
 
+    <!--B站视频-->
+    <section id="bilibili_video" class="section light-bg">
+        <div class="container">
+            <h2><b>B站视频</b></h2>
+            <div class="video-container">
+                <iframe src="https://player.bilibili.com/player.html?bvid=BV1oWznYsEgJ" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"> </iframe>
+            </div>
+        </div>
+    </section>
+
     <!--制作者-->
     <section id="author" class="section light-bg">
         <div class="container">
@@ -138,15 +157,15 @@
         <a href="download" class="btn">前往下载</a>
     </section>
 
-    <!--页脚-->
-    <footer>
-        <div class="container">
-            <p>Copyright © 2025 龙ger_longer</p>
-        </div>
-    </footer>
+    <!--推荐内容-->
+    <section id="ad"></section>
 
-    
+    <!--页脚-->
+    <footer id="footer"></footer>
+
     <script src="/js/script.js"></script>
+    <script src="/js/ad.js"></script>
+    <script src="/js/footer.js"></script>
 
 </body>
 </html>

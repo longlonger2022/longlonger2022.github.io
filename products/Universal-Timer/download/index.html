@@ -11,10 +11,21 @@
     <!--导航栏-->
     <nav id="navbar">
         <div class="container">
-            <a href="../" title="点击返回上级页面" class="logo">龙ger_longer | 产品 | <span>万能倒计时</span> | <span>下载页</span></a>
+            <div class="logo">
+                <span>龙ger_longer</span>
+                <div class="path">
+                    <a href="/" class="link">首页</a>
+                    /
+                    <a href="/products" class="link">产品</a>
+                    /
+                    <a href="../" class="link">万能倒计时</a>
+                    /
+                    <a href="#" class="link">下载</a>
+                </div>
+            </div>
             <ul>
                 <li><a href="/">首页</a></li>
-                <li><a href="/">更多产品</a></li>
+                <li><a href="/products">更多产品</a></li>
                 <li><a href="#author">社交平台</a></li>
             </ul>
         </div>
@@ -24,20 +35,27 @@
         <div class="container">
             <h2><b>下载</b></h2>
             <div class="product-intros">
-                <a href="download_files/Universal-Timer.zip" title="点击下载最新版" class="product-intro golden">
-                    <h3>最新版-1.3版本</h3>
+                <a href="download_files/Universal-Timer.7z" title="点击下载最新版" class="product-intro golden">
+                    <h3>最新版-1.4.1版本</h3>
                     <ul>
                         <li>发布日期：2025年8月21日</li>
-                        <li>解压后文件大小：27.6MB</li>
+                        <li>解压后文件大小：81.9MB</li>
                     </ul>
                 </a>
-                <a href="https://github.com/longlonger2022/Universal-Timer/releases" title="点击前往GitHub查看更多版本" class="product-intro">
+                <a href="https://lgr.lanzoue.com/iJ8Gi3hkmm4j" title="点击前往蓝奏云下载" class="product-intro golden" target="_blank">
+                    <h3>最新版-1.4.1版本（蓝奏云）</h3>
+                    <ul>
+                        <li>访问密码：long</li>
+                        <li>点击前往蓝奏云下载</li>
+                    </ul>
+                </a>
+                <a href="https://github.com/longlonger2022/Universal-Timer/releases" title="点击前往GitHub查看更多版本" class="product-intro" target="_blank">
                     <h3>更多版本</h3>
                     <ul>
                         <li>前往GitHub查看更多版本</li>
                     </ul>
                 </a>
-                <a href="https://github.com/longlonger2022/Universal-Timer" title="点击前往GitHub获取源代码" class="product-intro blue">
+                <a href="https://github.com/longlonger2022/Universal-Timer" title="点击前往GitHub获取源代码" class="product-intro blue" target="_blank">
                     <h3>获取源代码</h3>
                     <ul>
                         <li>前往GitHub获取源代码(遵守GPL-3.0开源协议)</li>
@@ -98,15 +116,15 @@
         <a href="#download" class="btn">前往下载</a>
     </section>
 
+    <!--推荐内容-->
+    <section id="ad"></section>
+
     <!--页脚-->
-    <footer>
-        <div class="container">
-            <p>Copyright © 2025 龙ger_longer</p>
-        </div>
-    </footer>
-    
+    <footer id="footer"></footer>
 
     <script src="/js/script.js"></script>
+    <script src="/js/ad.js"></script>
+    <script src="/js/footer.js"></script>
 
 </body>
 </html>
