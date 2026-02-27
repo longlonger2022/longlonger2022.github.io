@@ -407,22 +407,24 @@ body {
     transform: translateY(-15px);
 }
 .intro_img {
-    margin-top: -20%;
-    float: right;
+    display: flex;
     width: 50%;
     height: auto;
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 10px 30px var(--blue-color);
     transition: all 0.5s ease;
+    float: right;
 }
 .intro_img:hover {
     transform: rotate(5deg) scale(1.1);
     box-shadow: 0 20px 100px var(--blue-color);
 }
-.intro_img#attribute {
+.vertical {
     width: auto;
-    height: 75vh;
+    height: auto;
+    max-width: 50%;
+    max-height: 75vh;
 }
 
 
@@ -551,19 +553,27 @@ body {
     flex-wrap: wrap;
     margin-top: 25px;
 }
+.area-intros {
+    gap: 100%;
+}
 .product-introarea {
     margin-top: 200px;
     flex: 1;
-    min-width: 300px;
+    width: 80%;
+    min-width: 256px;
+}
+.product-introarea-text {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+    padding-right: 2.5%;
 }
 .product-introarea p {
-    width: 50%;
     font-size: 2rem;
 }
 .product-introarea h3 {
-    width: 50%;
     font-size: 3rem;
-    margin-bottom: 10px;
     color: var(--dark-color);
 }
 .product-intro {
@@ -785,9 +795,10 @@ footer ul li a:hover::after {
         height: auto;
     }
 
-    .intro_img#attribute {
+    .vertical {
+        max-width: none;
+        max-height: none;
         width: 100%;
-        height: auto;
     }
 
     .project-card:hover{
@@ -795,6 +806,9 @@ footer ul li a:hover::after {
     }
     .product-intro:hover{
         transform: rotate(2.5deg) scale(1.05);
+    }
+    .product-introarea-text {
+        width: 100%;
     }
     .product-introarea p{
         width: 100%;
@@ -804,12 +818,13 @@ footer ul li a:hover::after {
     }
 
     .product-introarea {
+        margin-top: 45px;
         text-align: center;
-        margin-top: 10%;
+        width: 100%;
     }
     .video-container {
         width: 100%;
-    padding-bottom: calc(9 / 16 * 100%); /* 默认16:9 */
+        padding-bottom: calc(9 / 16 * 100%); /* 默认16:9 */
     }
     footer .show {
         flex-direction: column;
