@@ -494,7 +494,7 @@ body {
 /* 作品网格 */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     gap: 30px;
 }
 .project-card {
@@ -507,20 +507,44 @@ body {
 }
 .project-card:hover {
     box-shadow: 0 10px 25px var(--blue-color);
-    transform: rotate(5deg) scale(1.1);
+    transform: scale(1.1);
 }
 .project-card img {
-    width: 100%;
+    width: 40%;
+    float: left;
     height: auto;
     object-fit: cover;
 }
 .project-card h3 {
-    padding: 20px 20px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 15px 15px 5px;
+    max-height: 2rem;
     color: var(--dark-color);
 }
+.project-card:hover h3 {
+    max-height: 10rem;
+    white-space: normal;
+}
 .project-card p {
-    padding: 0 20px 20px;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.75rem;
+    padding: 0 15px 10px;
     color: var(--dark-color);
+}
+.project-card:hover p {
+    max-height: 50vh;
+    display: block;
+}
+.project-card-content {
+    width: 60%;
+    float: right;
 }
 /* 联系表单 */
 #contact-form {
@@ -658,6 +682,10 @@ body {
 .video-container:hover {
     box-shadow: var(--blue-color) 0px 10px 100px;
 }
+.large {
+    width: 100%;
+    padding-bottom: calc(9 / 16 * 100%); /* 16:9 */
+}
 /* 视频样式 */
 .video {
     position: absolute;
@@ -748,9 +776,6 @@ footer ul li a:hover::after {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .banner {
-        margin-top: 20%;
-    }
     .banner h1 {
         font-size: 2.5rem;
     }
@@ -802,7 +827,7 @@ footer ul li a:hover::after {
     }
 
     .project-card:hover{
-        transform: rotate(2.5deg) scale(1.05);
+        transform: scale(1.05);
     }
     .product-intro:hover{
         transform: rotate(2.5deg) scale(1.05);

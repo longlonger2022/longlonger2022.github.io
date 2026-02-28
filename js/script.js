@@ -12,13 +12,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// 导航栏滚动效果
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-    } else {
-        navbar.style.backgroundColor = 'var(--light-color)';
-    }
-});
