@@ -510,28 +510,26 @@ body {
     transform: scale(1.1);
 }
 .project-card img {
-    width: 40%;
+    width: 38.2%;
     float: left;
     height: auto;
     object-fit: cover;
 }
 .project-card h3 {
-    white-space: nowrap;
+    width: auto;
     overflow: hidden;
-    text-overflow: ellipsis;
     margin: 15px 15px 5px;
     max-height: 2rem;
+    -webkit-mask-image: linear-gradient(to right, black 40%, transparent);
+    mask-image: linear-gradient(to right, black 40%, transparent);
     color: var(--dark-color);
 }
 .project-card:hover h3 {
-    max-height: 10rem;
-    white-space: normal;
+    max-height: 4rem;
 }
 .project-card p {
-    display: -webkit-box;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
     overflow: hidden;
     text-overflow: ellipsis;
     max-height: 4.75rem;
@@ -539,11 +537,13 @@ body {
     color: var(--dark-color);
 }
 .project-card:hover p {
-    max-height: 50vh;
+    -webkit-mask-image: none;
+    mask-image: none;
+    max-height: 6.75rem;
     display: block;
 }
 .project-card-content {
-    width: 60%;
+    width: 61.8%;
     float: right;
 }
 /* 联系表单 */
